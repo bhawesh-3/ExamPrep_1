@@ -1,0 +1,136 @@
+/* Custom styles for ExamPrep */
+body {
+    font-family: 'Arial', sans-serif;
+    padding-top: 2px /* To account for fixed navbar */
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.hero-section, .cta-section {
+    background: linear-gradient(135deg, #007bff, #00bfff);
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.features-section {
+    background-color: #f8f9fa;
+}
+
+.footer {
+    background-color: #343a40;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #007bff, #00bfff);
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0;
+}
+
+textarea {
+    resize: none; /* Prevent resizing of textarea */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+
+/* Custom styles for Notes Page */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #007bff, #00bfff);
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0;
+}
+
+.notes-container {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+}
+
+.notes-content {
+    white-space: pre-wrap; /* Preserve line breaks and wrap text */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Custom styles for Quiz Page */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #007bff, #00bfff);
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0;
+}
+
+.form-check-input {
+    margin-top: 0.3em;
+}
+
+.form-check-label {
+    margin-left: 0.5em;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.notes-content {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    font-size: 15px;
+}
+.note-block {
+    line-height: 1.7;
+    font-family: 'Inter', sans-serif;
+}
+
+.generated-notes {
+    font-size: 1.15rem;
+    background-color: #f8f9fa;
+    white-space: pre-wrap; /* ensures new lines are shown */
+}

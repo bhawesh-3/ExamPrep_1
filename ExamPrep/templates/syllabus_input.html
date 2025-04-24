@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Syllabus Input - ExamPrep{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+        <div class="card border-0 shadow-lg animate__animated animate__fadeInUp">
+            <div class="card-header bg-gradient-primary text-white text-center py-4">
+                <h2 class="card-title mb-0"><i class="fas fa-book-open me-2"></i>Enter Your Syllabus</h2>
+            </div>
+            <div class="card-body p-5">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        <label for="syllabus" class="form-label fs-5"><i class="fas fa-pencil-alt me-2"></i>Syllabus</label>
+                        <textarea class="form-control form-control-lg" id="syllabus" name="syllabus" rows="6" placeholder="Paste or type your syllabus here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg w-100 py-3 animate__animated animate__pulse animate__infinite">
+                        <i class="fas fa-magic me-2"></i>Generate Notes
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

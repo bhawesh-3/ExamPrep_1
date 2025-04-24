@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Notes - ExamPrep{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-10">
+        <div class="card border-0 shadow-lg animate__animated animate__fadeInUp">
+            <div class="card-header bg-gradient-primary text-white text-center py-4">
+                <h2 class="card-title mb-0"><i class="fas fa-sticky-note me-2"></i>Generated Notes</h2>
+            </div>
+            <div class="card-body p-5">
+                <div class="notes-container bg-light p-4 rounded">
+                    {% if notes %}
+                        {% for note in notes %}
+                        <div class="note-block mb-5 p-4 bg-white rounded shadow-sm">
+                            <h4 class="text-primary">Notes for Syllabus:</h4>
+                            <p class="syllabus-content border p-3 rounded bg-light mb-3">{{ note.syllabus.content }}</p>
+                            
+                            <h5 class="text-success">Generated Notes:</h5>
+                            <div class="generated-notes border p-3 rounded bg-light" style="white-space: pre-wrap; font-size: 1.15rem; font-family: 'Inter', sans-serif;">
+                                {{ note.content }}
+                            </div>
+                            
+                            <p class="text-muted mt-3 small">Created at: {{ note.created_at }}</p>
+                        </div>
+                        <hr>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-center">No notes found. Generate some notes first!</p>
+                    {% endif %}
+                </div>
+                <div class="text-center mt-4">
+                    <a href="{% url 'syllabus_input' %}" class="btn btn-primary btn-lg animate__animated animate__pulse animate__infinite">
+                        <i class="fas fa-sync-alt me-2"></i>Generate Another
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
